@@ -152,3 +152,53 @@ Grain([
 	console.log(module.name, 'is loaded');
 });
 ```
+
+## Reference
+
+### Example using backbone.js
+
+```Javascript
+Grain.define('post/input', [
+	'util/date',
+	'view/alert'
+], function(Util, Alert) {
+	var InputView = Backbone.View.extend({
+		events: {
+			'click': 'onClick'
+		},
+		onClick: function(e) {
+			var alert = new Alert.View();
+			alert.show({
+				text: Util.format(new Date())
+			});
+		}
+	});
+
+	return {
+		View: InputView
+	};
+});
+```
+
+```Javascript
+Grain.mixin({
+	'common': [
+		'util/date',
+		'util/string',
+		'util/number'
+	]
+});
+```
+
+```Javascript
+Grain([
+	'common',
+	'post/input'
+], function(Common, Input) {
+	var Content = Backbone.View.extend({
+	});
+	
+	new Input();
+	new Content();
+});
+```
