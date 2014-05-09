@@ -2,7 +2,7 @@
  * grain.js v0.3.1
  * Copyright (c) 2014 Kyohei Ito
  * License: MIT (http://www.opensource.org/licenses/mit-license)
- * GHE: http://ghe.amb.ca.local/ito-kyohei/grain.js
+ * GitHub: https://github.com/KyoheiG3/grain
  */
 (function() {
 	'use strict';
