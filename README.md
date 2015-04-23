@@ -41,7 +41,7 @@ Define the module in `Grain.define(id, dependencies, fn)`.
 Grain.define('the/great/module', [
 ], function() {
 	return {
-		name: 'TheGreadModule'
+		name: 'TheGreatModule'
 	};
 });
 ```
